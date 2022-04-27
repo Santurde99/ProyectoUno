@@ -1,0 +1,23 @@
+public class Partida
+{
+	// atributos
+	
+	private ListaJ listaJugadores;
+	private static Partida miPartida = new Partida();
+	
+	
+	// constructora
+	
+	private Partida()
+	{ 
+		this.listaJugadores=new ListaJ();
+	}
+	
+ 	public static Partida getPartida() 
+	{
+		return Partida.miPartida;
+	}
+ 	public void jugarPartida()
+ 	{
+
+ 	}
