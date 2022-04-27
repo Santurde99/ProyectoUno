@@ -21,5 +21,7 @@ public class Partida
  	{
  		this.listaJugadores.barajar();
 		this.listaJugadores.añadirJugadores();
+		this.listaJugadores.repartirCartas();
+		this.listaJugadores.pasarTurno(pNumTurnos);
  	}
 }
