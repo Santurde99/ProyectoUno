@@ -19,6 +19,7 @@ public class Partida
 	}
  	public void jugarPartida()
  	{
- 
+ 		this.listaJugadores.barajar();
+		this.listaJugadores.añadirJugadores();
  	}
 }
