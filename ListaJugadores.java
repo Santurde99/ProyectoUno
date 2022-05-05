@@ -8,6 +8,7 @@ public class ListaJugadores {
 	//Atributos	
 	private ArrayList<Jugador> lista;
 	private static ListaJugadores milistaJugadores=new ListaJugadores();
+	private int jugadorConTurno;
 
 	//Metodos
 	private  ListaJugadores() {
@@ -30,15 +31,22 @@ public class ListaJugadores {
 		} 
 	}
 	
-	public void pasarTurno(int pNumTurnos) {		//Ignorar de momento
+	public void pasarTurno(int pNumTurnos) {		
 		Iterator<Jugador> itr=this.getIterador();
-		Jugador unJugador = null;
-		while (itr.hasNext()) {
-			unJugador.ejecutarTurno();
-		
+		Jugador unJugador = lista.get(jugadorConTurno);
+		int cuantosTurnos = pNumTurnos;
+		while (cuantosTurnos > 0) {
+			if (itr.hasNext() == false) {
+				unJugador = null;
+				unJugador = itr.next();
+				cuantosTurnos = cuantosTurnos - 1;
+			}else {
+			unJugador = itr.next();
+			cuantosTurnos = cuantosTurnos - 1;
+			}
 		}
 		
-
+		unJugador.ejecutarTurno();
 	}
 	
 	public void robarCartasInicio() {		//hace un loop en el que ejecuta el metodo de robar las cartas iniciales de todos los jugadores de la lista
