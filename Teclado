@@ -1,0 +1,22 @@
+public class Teclado 
+{ 
+ private Scanner sc;
+ private static Teclado miTeclado = new Teclado();
+ 
+ private Teclado(){
+ this.sc = new Scanner(System.in);
+ 
+ public static Teclado getTeclado() {
+ return Teclado.miteclado ; }
+ 
+ public char leerCaracter() {
+ Scanner escaner = new Scanner(System.in);
+ System.out.println("Introduce un caracter valido");
+ try {
+ char caracter =  escaner.next();
+ }
+ catch (CaracterNoValidoException) {
+ System.out.println("Este no es un caracter valido");
+ }
+ }
+ }
