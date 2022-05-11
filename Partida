@@ -19,7 +19,7 @@ public class Partida
 	}
  	public void jugarPartida()
  	{
- 		this.listaJugadores.barajar();
+ 		this.baraja.barajar();
 		this.listaJugadores.añadirJugadores();
 		this.listaJugadores.repartirCartas();
 		this.listaJugadores.pasarTurno(pNumTurnos);
